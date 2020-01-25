@@ -1,0 +1,29 @@
+<mat-grid-list cols="4" [formGroup]="form">
+    <mat-grid-tile class="w-100">
+        <mat-form-field appearance="outline" >
+            <mat-label>Cep</mat-label>
+            <input matInput (blur)="getInformation()" formControlName="cep">
+        </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-form-field appearance="outline" >
+            <mat-label>Endereço</mat-label>
+            <input matInput formControlName="logradouro">
+        </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-form-field appearance="outline" >
+            <mat-label>Cidade</mat-label>
+            <input matInput readonly formControlName="localidade">
+        </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-form-field appearance="outline" >
+            <mat-label>Estado</mat-label>
+            <input matInput readonly formControlName="uf">
+        </mat-form-field>
+    </mat-grid-tile>
+</mat-grid-list>
+<div class="w-100 center-object">
+    <button mat-raised-button color="accent" (click)="sendData()">Enviar</button>
+</div>
