@@ -25,5 +25,9 @@
     </mat-grid-tile>
 </mat-grid-list>
 <div class="w-100 center-object">
-    <button mat-raised-button color="accent" (click)="sendData()">Enviar</button>
+    <button mat-raised-button color="accent" [disabled]="form.valid == false" (click)="sendData()">Enviar</button>
+</div>
+
+<div class="w-100 center-object">
+    <button mat-raised-button color="accent" (click)="create()">Criar</button>
 </div>
